@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html,body{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-color: #1B1725;
+}
+
+/* Remove Autofill background color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 1000px #1B1725 inset !important;
+    -webkit-text-fill-color: #DFD9C6 !important;
+}
