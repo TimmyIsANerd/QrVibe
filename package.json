@@ -1,5 +1,5 @@
 {
-  "name": "dating-app",
+  "name": "QrVibe",
   "version": "0.0.0",
   "private": true,
   "description": "a Sails application",
@@ -11,12 +11,18 @@
     "@sailshq/connect-redis": "^3.2.1",
     "@sailshq/lodash": "^3.10.3",
     "@sailshq/socket.io-redis": "^5.2.0",
+    "axios": "^1.2.1",
     "inertia-sails": "^0.1.1",
+    "lim-mailer": "^1.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-icons": "^4.7.1",
     "sails": "^1.5.2",
+    "sails-hook-morgan": "^1.0.5",
+    "sails-hook-organics": "^2.2.1",
     "sails-hook-orm": "^4.0.0",
     "sails-hook-sockets": "^2.0.0",
+    "sails-mongo": "^2.0.0",
     "webpack": "^5.72.1"
   },
   "devDependencies": {
