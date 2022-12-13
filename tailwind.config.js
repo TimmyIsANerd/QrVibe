@@ -6,6 +6,7 @@ module.exports = {
         secondary: '#DFD9C6',
         bodyText: '#1B1725',
         primary: '#285A8C',
+        error:'#FE5050'
       },
     },
   },
