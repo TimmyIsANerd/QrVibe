@@ -1,8 +1,4 @@
-# dating-app
+# QrVibe Dynamic QR Code Generator
 
-This template should help get you started developing with a modern Sails fullstack application with Inertia and Vue 3.
+This is a modern Sails fullstack application built with Inertia and React Js.
 
-This scaffold contains:
-* webpack
-* tailwind
-* react
