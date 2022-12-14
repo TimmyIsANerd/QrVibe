@@ -19,4 +19,12 @@ module.exports.custom = {
   // stripeSecret: 'sk_test_Zzd814nldl91104qor5911gjald',
   // …
 
+  verifyEmailAddresses:false,
+  baseUrl: 'localhost:1337',
+  smtpData:{
+    emailAddress:'adefeyitimi@gmail.com',
+    password:'F80BFC2EE15A202717F77938357C25B87CD6',
+    server:'smtp.elasticemail.com',
+    port:2525
+  }
 };
