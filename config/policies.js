@@ -8,6 +8,8 @@
  * https://sailsjs.com/docs/concepts/policies
  */
 
+const isAuth = require('../api/policies/isAuth');
+
 module.exports.policies = {
 
   /***************************************************************************
@@ -17,6 +19,8 @@ module.exports.policies = {
   *                                                                          *
   ***************************************************************************/
 
-  // '*': true,
+  '*': true,
+  "dashboard/index":isAuth,
+  "auth/login":isAuth,
 
 };
