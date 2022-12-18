@@ -4,13 +4,9 @@ module.exports = async function (req, res, proceed) {
 
   if (url === '/') {
     if (req.session.userId) {
-      sails.log.info('Session Found!')
+      sails.log.info('Session Found')
 
       res.redirect('/dashboard')
-    } else {
-      sails.log.info('No Session Found')
-
-      res.redirect('/login')
     }
   }
 
@@ -20,15 +16,6 @@ module.exports = async function (req, res, proceed) {
       sails.log.info('No Session Found')
 
       res.redirect('/login')
-    }
-  }
-
-  if (url.includes('/login')) {
-    sails.log.info('Checking for session...')
-    if (req.session.userId) {
-      sails.log.info('Session Found!')
-
-      res.redirect('/dashboard')
     }
   }
 
