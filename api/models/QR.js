@@ -21,7 +21,14 @@ module.exports = {
     qrUser: {
       model: 'user',
     },
-
+    link: {
+      type: 'string',
+      description:'QR Code URL'
+    },
+    shortCode: {
+      type:'string',  
+    },
+    
     analytics: {
       description: 'Analytics',
       via: 'qr',
