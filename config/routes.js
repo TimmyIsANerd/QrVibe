@@ -23,7 +23,13 @@ module.exports.routes = {
   'GET /login': 'auth/login',
   'GET /logout': 'auth/logout',
   'GET /dashboard': 'dashboard/index',
+  'GET /reset/password': 'auth/reset',
+  'GET /new/password/:token': 'auth/new-password',
   // AUTH
   'POST /register': 'server/auth/register',
-  'POST /login': 'server/auth/login'
+  'POST /login': 'server/auth/login',
+  'POST /reset/password':'server/auth/reset',
+  // Generate QR Code
+  'POST /generate': 'server/qr/generate',
+  'DELETE /qr/:id': 'server/qr/delete',
 }
