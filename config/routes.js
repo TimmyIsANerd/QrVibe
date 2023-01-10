@@ -28,7 +28,8 @@ module.exports.routes = {
   // AUTH
   'POST /register': 'server/auth/register',
   'POST /login': 'server/auth/login',
-  'POST /reset/password':'server/auth/reset',
+  'POST /reset/password': 'server/auth/reset',
+  'POST /new/password': 'server/auth/new-password',
   // Generate QR Code
   'POST /generate': 'server/qr/generate',
   'DELETE /qr/:id': 'server/qr/delete',
