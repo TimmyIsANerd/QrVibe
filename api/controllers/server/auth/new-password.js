@@ -41,7 +41,7 @@ module.exports = {
     }
 
     const updatedRecord = await User.updateOne({ id: userRecord.id }).set({
-      password: newPassword,
+      password: await sails.helpers.passwords.hashPassword(newPassword),
     })
 
     if (!updatedRecord) {
