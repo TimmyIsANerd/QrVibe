@@ -29,7 +29,7 @@ module.exports = {
     const QrRecord = await QR.create({
       qrUser: await sails.helpers.getUserId(),
       link,
-      shortCode: await sails.helpers.generateShortCode(),
+      shortCode: await sails.helpers.generateShortCode(5),
     }).fetch()
 
     if (!QrRecord) {
