@@ -9,20 +9,23 @@ export default function Login() {
     password: '',
   })
 
-  const [error, setError] = useState(false);
+  const [error, setError] = useState(false)
 
   function Error() {
     return (
       <p className="mt-3 text-center text-[14px] font-normal text-[#8C8CA1]">
         Incorrect Email/Password?{' '}
-        <a className="text-error underline hover:cursor-pointer" href="/reset">
+        <a
+          className="text-error underline hover:cursor-pointer"
+          href="/reset/password"
+        >
           Reset Password
         </a>
       </p>
     )
   }
 
-  function handleChange(e){
+  function handleChange(e) {
     const key = e.target.id
     const value = e.target.value
 
@@ -54,7 +57,7 @@ export default function Login() {
         const { message } = error.response.data
         if (message === "The provided email and password didn't match") {
           setError(true)
-          clearField();
+          clearField()
         }
       })
   }
