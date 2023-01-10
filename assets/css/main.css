@@ -12,13 +12,13 @@ body {
   body {
     background-color: #1b1725;
   }
+}
 
-  /* Remove Autofill background color */
-  input:-webkit-autofill,
-  input:-webkit-autofill:hover,
-  input:-webkit-autofill:focus,
-  input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 1000px #1b1725 inset !important;
-    -webkit-text-fill-color: #dfd9c6 !important;
-  }
+/* Remove Autofill background color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #1b1725 inset !important;
+  -webkit-text-fill-color: #dfd9c6 !important;
 }
