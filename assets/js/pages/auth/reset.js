@@ -44,7 +44,11 @@ export default function Reset() {
             className="my-3 flex flex-col gap-y-2"
             onSubmit={(e) => handleSubmit(e)}
           >
-            <div className="flex h-[60px] items-center justify-start gap-x-1 rounded-md border-2 border-[#DFD9C6] p-2">
+            <div
+              className={`flex h-[60px] items-center justify-start gap-x-1 rounded-md border-2 p-2 ${
+                message === '' ? 'border-[#DFD9C6]' : 'border-error'
+              }`}
+            >
               <img
                 src="/images/icons/msg.svg"
                 className="h-[20px] w-[20px]"
