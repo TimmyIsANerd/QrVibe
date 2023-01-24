@@ -14,6 +14,7 @@ export default function Index({ name }) {
   const [error, setError] = useState('')
 
   function handleChange(e) {
+    setError('')
     const key = e.target.id
     const value = e.target.value
 
@@ -72,7 +73,11 @@ export default function Index({ name }) {
             </p>
           </div>
           <form className="my-3 flex flex-col gap-y-2" onSubmit={handleSubmit}>
-            <div className="flex h-[60px] items-center justify-start gap-x-1 rounded-md border-2 border-[#DFD9C6] p-2">
+            <div
+              className={`flex h-[60px] items-center justify-start gap-x-1 rounded-md border-2 border-[#DFD9C6] p-2 ${
+                error === '' ? 'border-[#DFD9C6]' : 'border-error'
+              }`}
+            >
               <FiUser className="h-[20px] w-[20px]" color="#DFD9C6" />
               <input
                 type="text"
@@ -84,7 +89,11 @@ export default function Index({ name }) {
                 required
               />
             </div>
-            <div className="flex h-[60px] items-center justify-start gap-x-1 rounded-md border-2 border-[#DFD9C6] p-2">
+            <div
+              className={`flex h-[60px] items-center justify-start gap-x-1 rounded-md border-2 border-[#DFD9C6] p-2 ${
+                error === '' ? 'border-[#DFD9C6]' : 'border-error'
+              }`}
+            >
               <img
                 src="/images/icons/msg.svg"
                 className="h-[20px] w-[20px]"
@@ -100,7 +109,11 @@ export default function Index({ name }) {
                 required
               />
             </div>
-            <div className="flex h-[60px] items-center justify-start gap-x-1 rounded-md border-2 border-[#DFD9C6] p-2">
+            <div
+              className={`flex h-[60px] items-center justify-start gap-x-1 rounded-md border-2 border-[#DFD9C6] p-2 ${
+                error === '' ? 'border-[#DFD9C6]' : 'border-error'
+              }`}
+            >
               <img
                 src="/images/icons/lock.svg"
                 className="h-[20px] w-[20px]"
