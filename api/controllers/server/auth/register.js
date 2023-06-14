@@ -7,6 +7,7 @@ module.exports = {
     fullName: {
       type: 'string',
       description: "User's full Name",
+      required: true,
     },
 
     emailAddress: {
@@ -28,7 +29,7 @@ module.exports = {
 
   exits: {
     success: {
-      statusCode:200,
+      statusCode: 200,
       description: 'New user account was created successfully.',
     },
 
@@ -48,11 +49,6 @@ module.exports = {
   },
 
   fn: async function ({ fullName, emailAddress, password }) {
-    if (emailAddress === '' || password === '' || fullName === '') {
-      sails.log.error('Empty Input from client side')
-      throw 'invalid'
-    }
-
     var cleanEmail = emailAddress.toLowerCase()
 
     if (password.length < 8) {
@@ -78,9 +74,10 @@ module.exports = {
             }
           : {}
       )
-    ).intercept("E_UNIQUE", "emailAlreadyInUse")
-    .intercept({ name: "UsageError" }, "invalid")
-    .fetch();
+    )
+      .intercept('E_UNIQUE', 'emailAlreadyInUse')
+      .intercept({ name: 'UsageError' }, 'invalid')
+      .fetch()
 
     // Store the user's new id in their session.
     this.req.session.userId = userRecord.id
